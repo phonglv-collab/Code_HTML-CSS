@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Lê Văn Phong — Trang cá nhân</title>
+<link href="./style.css" rel="stylesheet"/>
+<style>
+/* Live clock widget (fixed on the right) */
+.live-clock{
+  position: fixed;
+  right: 24px;
+  top: 110px;
+  z-index: 50;
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid rgba(2,6,23,.1);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(2,6,23,.12);
+  width: 240px;
+  padding: 12px 14px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+.live-clock .clock-row{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+.live-clock .time{
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: #1d4ed8; /* brand blue */
+}
+.live-clock .sec{
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d4ed8;
+}
+.live-clock .date{
+  margin-top: 6px;
+  font-size: 14px;
+  color: #475569; /* muted */
+}
+.live-clock .badge{
+  display:inline-block;
+  font-size: 11px;
+  background: rgba(245,158,11,.15); /* orange tint */
+  color: #b45309;
+  border: 1px solid rgba(245,158,11,.35);
+  padding: 2px 6px;
+  border-radius: 999px;
+}
+@media (max-width: 680px){
+  .live-clock{ right: 12px; top: auto; bottom: 16px; width: 200px; }
+  .live-clock .time{ font-size: 22px; }
+}
+
+/* --- Hero with LEFT photo --- */
+.hero{
+  display: grid;
+  grid-template-columns: 20px 1fr; /* left photo, right content */
+  gap: 24px;
+  align-items: start;
+}
+.hero-photo-left .profile-card{
+  background: #ffffff;
+  border: 3px solid #e2e8f0;         /* visible border */
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(2,6,23,.08);
+  overflow: hidden;
+}
+.hero-photo-left .profile-card img{
+  display: block;
+  width: 50%;
+  height: auto;
+}
+.hero-photo-left .profile-card figcaption{
+  padding: 10px 12px;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  font-size: 14px;
+  color: #334155;
+  text-align: center;
+}
+@media (max-width: 320px){
+  .hero{ grid-template-columns: 1fr; }
+}
+
+</style></head>
+<body>
+<header class="site-header">
+<div class="container header-wrap">
+<a class="brand" href="index.html">
+<div class="logo">LP</div>
+<div class="brand-text">
+<h1 class="site-title">Lê Văn Phong</h1>
+<p class="site-subtitle">Giảng viên Công nghệ thông tin</p>
+</div>
+</a>
+<nav class="main-nav">
+<a class="active" href="index.html">Trang chủ</a>
+<a href="hoctap.html">Học tập</a>
+<a href="kynangsong.html">Kỹ năng sống</a>
+</nav>
+</div>
+</header><aside aria-live="polite" class="live-clock">
+<div class="clock-row">
+<div class="time" id="clock-time">00:00</div>
+<div class="sec" id="clock-sec">00</div>
+<span class="badge">Giờ hiện tại</span>
+</div>
+<div class="date" id="clock-date">Thứ hai, 01/01/2025</div>
+</aside>
+<main class="container">
+
+  <aside class="hero-photo-left" aria-label="Ảnh cá nhân">
+    <figure class="profile-card">
+      <img src="./0J7A9935.JPG" alt="Ảnh cá nhân" />
+      <figcaption>Lê Văn Phong — Giảng viên CNTT</figcaption>
+    </figure>
+  </aside>
+
+<div class="hero-text">
+<h2>Xin chào 👋</h2>
+<p>
+          Tôi là <strong>Lê Văn Phong</strong> — giảng viên ngành CNTT, đam mê giảng dạy,
+          xây dựng học liệu thực tiễn và đồng hành cùng sinh viên trong các dự án học thuật.
+        </p>
+<div class="contact-grid">
+<a class="chip" href="mailto:Lephongit.utehy@gmail.com">📧 Lephongit.utehy@gmail.com</a>
+<a class="chip" href="tel:0984509076">📞 0984 509 076</a>
+<span class="chip">🎂 10/10/1989</span>
+<span class="chip">📍 Số 15 Ngõ Khoé, Xóm Chợ, Thôn Đống, Xã Bình Minh, Hà Nội</span>
+<a class="chip" href="https://www.facebook.com/phong.levan.927?locale=vi_VN" target="_blank">🔗 Facebook</a>
+</div>
+<div class="cta-row">
+<a class="btn" href="hoctap.html">Xem tài liệu học tập</a>
+<a class="btn btn-ghost" href="kynangsong.html">Xem kỹ năng sống</a>
+</div>
+</div>
+</section>
+<section class="cards">
+<h3>Học vấn &amp; Chứng chỉ</h3>
+<div class="grid">
+<article class="card">
+<h4>Thạc sĩ CNTT — ĐH SPKT Hưng Yên</h4>
+<p>2014–2016 • Tốt nghiệp loại Khá</p>
+</article>
+<article class="card">
+<h4>Chứng chỉ</h4>
+<ul class="compact">
+<li>Tiếng Anh B1 (2016)</li>
+<li>Sư phạm dạy nghề (2019)</li>
+<li>Nghiệp vụ sư phạm GV ĐH, CĐ (2021)</li>
+</ul>
+</article>
+</div>
+</section>
+<section class="cards">
+<h3>Kinh nghiệm giảng dạy</h3>
+<div class="timeline">
+<div class="timeline-item">
+<div class="time">01/2013–09/2018</div>
+<div class="dot"></div>
+<div class="content">
+<h4>Giảng viên CNTT — CĐ Y Dược ASEAN; CĐ Công thương VN</h4>
+<p>Môn dạy: CSDL, Hệ QTCSDL, C/C++, C#, .NET, CNPM, KT máy tính, Quản lý dự án, Tin học cơ bản…</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="time">09/2018–10/2021</div>
+<div class="dot"></div>
+<div class="content">
+<h4>Giảng viên CNTT — CĐ Công nghệ Bách khoa HN</h4>
+<p>Môn dạy: CSDL, Thiết kế Web, C/C++, CNPM, KT máy tính, Quản lý dự án CNTT…</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="time">11/2021–12/2022</div>
+<div class="dot"></div>
+<div class="content">
+<h4>Giảng viên CNTT — ĐH Công nghệ Đông Á</h4>
+<p>Giảng dạy: Lập trình Web, Quản trị mạng, MMT, HTTTQL, CNPM…</p>
+</div>
+</div>
+<div class="timeline-item">
+<div class="time">01/2022–Nay</div>
+<div class="dot"></div>
+<div class="content">
+<h4>Giảng viên CNTT — ĐH Đại Nam</h4>
+<p>Thiết kế Web &amp; triển khai hệ thống phần mềm, Hệ thống máy tính, Kiến trúc &amp; HĐH, Mạng máy tính, Front-End…</p>
+</div>
+</div>
+</div>
+</section>
+<section class="cards">
+<h3>Mục tiêu nghề nghiệp</h3>
+<div class="card">
+<ul class="compact">
+<li>Nghiêm túc tự học để nâng cao chuyên môn.</li>
+<li>Tìm kiếm môi trường sư phạm để gắn bó lâu dài.</li>
+</ul>
+</div>
+</section>
+</main>
+<footer class="site-footer">
+<div class="container footer-wrap">
+<p>© <span id="year"></span> Lê Văn Phong. All rights reserved.</p>
+<nav class="footer-nav">
+<a href="index.html">Trang chủ</a>
+<a href="hoctap.html">Học tập</a>
+<a href="kynangsong.html">Kỹ năng sống</a>
+</nav>
+</div>
+</footer>
+<script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+<script>
+(function(){
+  function pad(n){ return n.toString().padStart(2,'0'); }
+  function updateClock(){
+    try{
+      const now = new Date();
+      const hh = pad(now.getHours());
+      const mm = pad(now.getMinutes());
+      const ss = pad(now.getSeconds());
+      const timeEl = document.getElementById('clock-time');
+      const secEl = document.getElementById('clock-sec');
+      const dateEl = document.getElementById('clock-date');
+      if(timeEl) timeEl.textContent = hh + ":" + mm;
+      if(secEl)  secEl.textContent  = ss;
+      if(dateEl){
+        const opts = { weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit' };
+        const fmt = new Intl.DateTimeFormat('vi-VN', opts);
+        dateEl.textContent = fmt.format(now);
+      }
+    }catch(e){ /* no-op */ }
+  }
+  updateClock();
+  setInterval(updateClock, 1000);
+})();
+</script></body>
+</html>

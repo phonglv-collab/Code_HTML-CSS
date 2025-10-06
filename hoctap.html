@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Học tập — Lê Văn Phong</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="brand" href="index.html">
+        <div class="logo">LP</div>
+        <div class="brand-text">
+          <h1 class="site-title">Lê Văn Phong</h1>
+          <p class="site-subtitle">Tài liệu học tập CNTT</p>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Trang chủ</a>
+        <a href="hoctap.html" class="active">Học tập</a>
+        <a href="kynangsong.html">Kỹ năng sống</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h2>Kho học liệu</h2>
+      <p>
+        Nơi tập hợp slide, bài thực hành, đề cương và tài nguyên mở cho sinh viên ngành CNTT.
+        Mỗi mục đều có mô tả ngắn, file mẫu và đường dẫn tham khảo.
+      </p>
+      <div class="filters">
+        <label>
+          <span>Tìm nhanh:</span>
+          <input type="search" placeholder="VD: 'Thiết kế Web', 'CSDL', 'Front-End'…" oninput="filterCards(this.value)" />
+        </label>
+      </div>
+    </section>
+
+    <section class="grid" id="cards">
+      <!-- Ví dụ học liệu: có thể nhân bản các khối card bên dưới -->
+      <article class="card doc">
+        <div class="badge">Web</div>
+        <h3>Thiết kế Web & Front-End</h3>
+        <p>Slide lý thuyết, bộ bài tập HTML/CSS/JS căn bản, mẫu dự án 3-tuần.</p>
+        <div class="doc-actions">
+          <a class="btn" href="#" aria-disabled="true">Tải slide (PDF)</a>
+          <a class="btn btn-ghost" href="#" aria-disabled="true">Mã nguồn mẫu</a>
+        </div>
+        <ul class="tags">
+          <li>HTML</li><li>CSS</li><li>JavaScript</li>
+        </ul>
+      </article>
+
+      <article class="card doc">
+        <div class="badge">Cơ sở dữ liệu</div>
+        <h3>Hệ QTCSDL & SQL</h3>
+        <p>Bộ lab SQL Server, ERD, chỉ mục, tối ưu truy vấn; đề cương + đáp án gợi ý.</p>
+        <div class="doc-actions">
+          <a class="btn" href="#" aria-disabled="true">Lab (DOCX)</a>
+          <a class="btn btn-ghost" href="#" aria-disabled="true">Dataset mẫu</a>
+        </div>
+        <ul class="tags">
+          <li>SQL Server</li><li>ERD</li><li>Tối ưu</li>
+        </ul>
+      </article>
+
+      <article class="card doc">
+        <div class="badge">Mạng</div>
+        <h3>Mạng máy tính</h3>
+        <p>Ghi chú lý thuyết, bài thực hành mô phỏng, câu hỏi tự ôn luyện theo chương.</p>
+        <div class="doc-actions">
+          <a class="btn" href="#" aria-disabled="true">Bài thực hành</a>
+          <a class="btn btn-ghost" href="#" aria-disabled="true">Câu hỏi ôn tập</a>
+        </div>
+        <ul class="tags">
+          <li>OSI</li><li>TCP/IP</li><li>Routing</li>
+        </ul>
+      </article>
+
+      <article class="card doc">
+        <div class="badge">CNPM</div>
+        <h3>Công nghệ phần mềm</h3>
+        <p>Mẫu tài liệu SRS, use case, sơ đồ UML và checklist kiểm thử.</p>
+        <div class="doc-actions">
+          <a class="btn" href="#" aria-disabled="true">Template (DOCX)</a>
+          <a class="btn btn-ghost" href="#" aria-disabled="true">Ví dụ UML</a>
+        </div>
+        <ul class="tags">
+          <li>UML</li><li>Testing</li><li>SRS</li>
+        </ul>
+      </article>
+    </section>
+
+    <section class="upload-hint card">
+      <h3>Hướng dẫn đăng tải tài liệu</h3>
+      <ol>
+        <li>Chuẩn bị file (PDF/DOCX/PPTX/ZIP code).</li>
+        <li>Đặt tên chuẩn: <code>HocPhan_Tuan_Muc-Tieu_PhiênBan</code> (VD: <code>WebCoBan_Tuan03_ThuVienLayout_v1.2.pdf</code>).</li>
+        <li>Đăng file lên Google Drive/OneDrive và dán link ở từng học liệu.</li>
+        <li>Cập nhật mô tả ngắn (mục tiêu, yêu cầu, cách chấm).</li>
+      </ol>
+      <p><em>Mẹo:</em> Có thể dùng GitHub/GitLab cho bài tập mã nguồn để sinh viên dễ clone và gửi PR.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Lê Văn Phong. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Trang chủ</a>
+        <a href="hoc-tap.html">Học tập</a>
+        <a href="ky-nang-song.html">Kỹ năng sống</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function filterCards(q) {
+      const cards = document.querySelectorAll('#cards .card');
+      const term = q.trim().toLowerCase();
+      cards.forEach(c => {
+        const txt = c.innerText.toLowerCase();
+        c.style.display = txt.includes(term) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

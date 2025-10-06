@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kỹ năng sống — Lê Văn Phong</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-wrap">
+      <a class="brand" href="index.html">
+        <div class="logo">LP</div>
+        <div class="brand-text">
+          <h1 class="site-title">Lê Văn Phong</h1>
+          <p class="site-subtitle">Kỹ năng sống & ghi chép cá nhân</p>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Trang chủ</a>
+        <a href="hoctap.html">Học tập</a>
+        <a href="kynangsong.html" class="active">Kỹ năng sống</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="page-intro">
+      <h2>Sống học hỏi — học hỏi để sống tốt</h2>
+      <p>
+        Góc nhỏ chia sẻ các thói quen tích cực, cách quản lý thời gian, giao tiếp,
+        sức khỏe tinh thần và tư duy phát triển cho sinh viên & đồng nghiệp.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Quản lý thời gian 101</h3>
+        <ul class="compact">
+          <li>Ưu tiên theo ma trận Eisenhower (Khẩn cấp/Quan trọng).</li>
+          <li>Học theo Pomodoro 25′ tập trung + 5′ nghỉ.</li>
+          <li>Tuần nào cũng có “slot không xê dịch” cho việc quan trọng.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Giao tiếp & làm việc nhóm</h3>
+        <ul class="compact">
+          <li>Ghi nhận — phản hồi — đề xuất (3 bước trong 1 câu trả lời).</li>
+          <li>“Đồng thuận tối thiểu” để không trì hoãn quyết định nhóm.</li>
+          <li>Nhật ký quyết định: ai — làm gì — khi nào — vì sao.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Sức khỏe & thói quen</h3>
+        <ul class="compact">
+          <li>Ngủ đủ, nắng sáng, vận động nhẹ mỗi ngày.</li>
+          <li>Viết 3 điều biết ơn trước khi ngủ.</li>
+          <li>Giảm đa nhiệm, tăng đơn nhiệm có chủ đích.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Góc đọc sách</h3>
+        <p>Gợi ý vài đầu sách kỹ năng: <em>Atomic Habits</em>, <em>Deep Work</em>, <em>Crucial Conversations</em>.</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <h3>Chia sẻ bài viết</h3>
+      <p>Dán đường dẫn bài viết/ghi chú cá nhân (Google Docs/Notion/Blog) để sinh viên dễ theo dõi.</p>
+      <ul class="links">
+        <li><a href="#" aria-disabled="true">Bài viết: 7 thói quen học hiệu quả</a></li>
+        <li><a href="#" aria-disabled="true">Checklist: Chuẩn bị thuyết trình 10 phút</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Lê Văn Phong. All rights reserved.</p>
+      <nav class="footer-nav">
+        <a href="index.html">Trang chủ</a>
+        <a href="hoctap.html">Học tập</a>
+        <a href="kynangsong.html">Kỹ năng sống</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
